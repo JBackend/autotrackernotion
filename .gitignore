@@ -1,0 +1,25 @@
+# Notion configuration
+src/notion-config.js
+
+# Dependencies
+node_modules/
+
+# Build files
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+
+# Misc
+.DS_Store
+.env
+
+# Configuration files with sensitive data
+config.dev.json
+config.prod.json
+config.json
+
+# Production configuration
+config.json 

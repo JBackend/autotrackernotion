@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "setup": "cp config.example.json config.prod.json",
+    "prebuild": "mkdir -p dist/popup dist/icons dist/services",
+    "build:dev": "npm run prebuild && cp -r src/* dist/ && cp manifest.json dist/ && cp -r assets/icons/* dist/icons/ && cp config.dev.json dist/config.json",
+    "build:prod": "npm run prebuild && cp -r src/* dist/ && cp manifest.json dist/ && cp -r assets/icons/* dist/icons/ && cp config.prod.json dist/config.json"
+  }
+}
