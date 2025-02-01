@@ -2,30 +2,32 @@
 
 A Chrome extension to save URLs directly to your Notion database.
 
-## Setup
+## 1. Create a Notion Integration  
+1. Visit [Notion Integrations](https://www.notion.so/my-integrations).  
+2. Click **"New integration"** and give it a name (e.g., **"URL Saver"**).  
+3. Copy the **Internal Integration Token** (you’ll need this later).  
 
-1. Create a Notion integration:
-   - Go to https://www.notion.so/my-integrations
-   - Click "New integration"
-   - Name it (e.g., "URL Saver")
-   - Copy the "Internal Integration Token"
+## 2. Set Up Your Notion Database  
+1. Create a new database in Notion or use an existing one.  
+2. Ensure the database has at least the following properties:  
+   - **Name** (Text)  
+   - **URL** (URL)  
+3. Copy the **Database ID** from the URL:  
+   - It’s the part between your workspace name and `?`.  
+4. Share the database with your integration:  
+   - Open the database, click **"Share"**, and add your integration.  
 
-2. Create or select a Notion database:
-   - Create a new database in Notion or use an existing one
-   - Make sure it has "Name" and "URL" properties
-   - Copy the database ID from the URL (the part after the workspace name and before the "?")
-   - Share the database with your integration
+## 3. Configure the Extension  
+1. Copy `config.example.json` and rename it to `config.prod.json`.  
+2. Open `config.prod.json` and replace the placeholder values with:  
+   - Your **Notion Integration Token**.  
+   - Your **Database ID**.  
 
-3. Configure the extension:
-   - Copy `config.example.json` to `config.prod.json`
-   - Replace the placeholder values with your:
-     - Notion integration token
-     - Database ID
-
-4. Build the extension:
-   ```bash
-   npm run build:prod
-   ```
+## 4. Build the Extension  
+Run the following command to build the extension:  
+```sh
+npm run build:prod
+```
 
 5. Load in Chrome:
    - Go to chrome://extensions/
